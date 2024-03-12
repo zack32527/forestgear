@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Kanit', sans-serif;
+    font-size: 110%;
+    background-color: #202124;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoimage {
+    max-width: 200px; 
+    padding: 1em; 
+}
+
+nav {
+    color: aliceblue;
+    text-transform: lowercase;
+    font-size: 140%;
+    align-items: center;
+    padding: 0 2em 0 0;
+}
+nav ul {
+    /* padding: 0 1em; */
+    display: flex;
+    list-style-type: none;
+    gap: 2em;
+}
+
+nav a {
+    text-shadow: 0 0 3px black;
+}
+nav a:link, nav a:visited {
+    color: aliceblue;
+    text-decoration: none;
+    transition: all ease-in-out 300ms;
+}
+nav a:hover, nav a:focus {
+    color: fuchsia;
+    text-decoration: underline;
+    text-shadow: 0 0 9px black;
+}
+
+
+
+.hero {
+    background-color: darkgreen;
+    background-image: url(../images/hero-image-forest2.jpg);
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    height: 100vh;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+}
+.title-text {
+    align-self: flex-start;
+    margin: 15vw 0 0 12vw;
+    display: flex;
+    flex-direction: column;
+}
+.allcaps {
+    text-transform: lowercase;
+    color: fuchsia;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.title-text h1 {
+    font-size: 550%;
+    text-align: center;
+    letter-spacing: 25px;
+    outline: 3px solid fuchsia;
+    outline-offset: .2em;
+}
+.title-text p {
+    margin: 1.5em auto;
+}
+.thin-text {
+    font-weight: 200;
+}
+
+
+
+
+.sales-points {
+    padding: 8vh 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.sales-point {
+    margin: 2em 1.65em;
+    width: 25vw;
+}
+.sales-point p {
+    margin: .5em 0;
+}
+
+
+
+.cta {
+    height: 45vh;
+    background-image: url(../images/hero-image-forest.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cta-contents {
+    color: #202124;
+    padding: 3em 5em;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+    display: inline-block;
+    align-self: center;
+    margin-top: 1em;
+    padding: 1em 2em;
+    background-color: green;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px 2px gray;
+}
+.return-to-top {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 75px;
+    bottom: 75px;
+    z-index: 9999; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,.5);
+    transition: all ease-in-out 300ms;
+}
+ .return-to-top img {
+     max-width: 50px;
+ }
+ .return-to-top:hover {
+    background-color: rgba(255,0,255,1);
+ }
+
+footer {
+    flex-basis: 100vw;
+    padding: 2em 0;
+    border-top: 5px ridge goldenrod;
+}
+footer p {
+    font-size: 80%;
+    font-variant: small-caps;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .logoimage {
+        align-self: center;
+        justify-self: flex-start;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex: 1;
+        padding: 0;
+    
+    }
+    nav ul {
+        margin-top: 0.25em;
+    }
+    .title-text {
+        padding-top: 5vh;
+        align-self: center;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    
+    }
+    .allcaps {
+        letter-spacing: 5px;
+    }
+    .title-text h1 {
+        font-size: 150%;
+        letter-spacing: 5px;
+        outline: 3px solid aliceblue;
+        outline-offset: .05em;
+        flex-wrap: wrap;
+    }
+    .sales-points {
+        padding: 2vh 0;
+        justify-content: space-evenly;
+    }
+    .sales-point {
+        margin: 2em 1em;
+        width: 90vw;
+    }
+    .cta-contents {
+        padding: 3em 2em;
+        text-align: center;
+        margin: 3em;
+    }
+    .return-to-top {
+        left: 10px;
+        bottom: 10px;
+    }
+}
