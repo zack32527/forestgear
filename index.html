@@ -10,6 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
+    <!-- Slick Nav Links -->
+    <link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function()
+        {
+            $('#nav_menu').slicknav({prependTo:"#mobilemenu"});
+        });
+    </script>
+
     <link rel="stylesheet" href="styles/main.css">
     <link rel="shortcut icon" href="images/forest-icon-png-29.png" type="image/x-icon">
     <title>FORESTGEAR</title>
@@ -19,6 +30,8 @@
         <section class="hero">
             <header>
                 <img class="logoimage" src="images/logo.png" alt="Homepage" title="Homepage">
+                <nav id="mobilemenu"></nav>
+                
                 <nav id="nav_menu">
                     <ul>
                         <li><a href="index.html">Home</a></li>
